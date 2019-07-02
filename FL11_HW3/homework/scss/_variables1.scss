@@ -1,0 +1,21 @@
+$footer-background: #222;
+$content-background: #fff;
+$color-underline: #14a0c7;
+$section-card-color: $footer-background;
+$text-primary-color: #2c2f3c;
+$text-secondary-color: #c3c3c3;
+$text-tertiary-color: #fff;
+$button-text-color: $content-background;
+$button-background: #699900;
+$banner-background-image: linear-gradient(70deg, #65950e, #4c7b69, #2e5cd4);
+$header-image: url("../img/m-h-day.jpg");
+$font-map: (
+  primary: (
+    "Source Sans Pro",
+    sans-serif
+  ),
+  secondary: (
+    "Hind",
+    sans-serif
+  )
+);
