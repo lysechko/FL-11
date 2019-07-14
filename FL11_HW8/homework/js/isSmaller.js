@@ -3,7 +3,11 @@ function isBigger(a, b) {
 }
 
 function isSmaller(a, b) {
-  return !isBigger(a, b);
+  if (a === b) {
+    return false;
+  } else {
+    return !isBigger(a, b);
+  }
 }
 
 isSmaller(5, -1);
