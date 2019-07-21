@@ -32,8 +32,6 @@ function Fighter(props) {
     if (successRate) {
       console.log(`${rivalName} make ${rivalDamage} damage to ${fighterName}`);
       fighterHealt -= rivalDamage;
-
-      console.log(fighterHealt);
     } else {
       console.log(`${rivalName} attack missed`);
     }
