@@ -10,13 +10,7 @@ function Fighter(props) {
   this.getDamage = () => props.damage;
   this.getAgility = () => props.agility;
   this.getHealth = () => props.hp;
-  this.dealDamage = healthpoint => {
-    if (props.hp - healthpoint < 0) {
-      props.hp = 0;
-    } else {
-      props.hp -= healthpoint;
-    }
-  };
+
   this.attack = rival => {
     const successRate = Math.floor(Math.random() * max) > rival.getAgility();
     if (successRate) {
@@ -41,6 +35,7 @@ function Fighter(props) {
       props.hp -= healthpoint;
     }
   };
+
   this.heal = healthpoint => {
     if (props.hp + healthpoint > totalHP) {
       props.hp = totalHP;
@@ -50,9 +45,7 @@ function Fighter(props) {
   };
 
   this.addWin = () => combatHistory.wins++;
-  this.addLoss = () => {
-    combatHistory.loss++;
-  };
+  this.addLoss = () => combatHistory.loss++;
 }
 
 function battle(fighter1, fighter2) {
