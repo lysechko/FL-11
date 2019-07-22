@@ -1,101 +1,64 @@
 function Fighter(props) {
+  const totalHP = props.hp;
+  const max = 100;
   const combatHistory = {
     wins: 0,
     loss: 0
   };
-  const max = 100;
-  let fighterFeature = props;
-  const { name: fighterName, damage: fighterDamage, agility: fighterAgility } = fighterFeature;
-  const { hp: totalHP } = props;
-  let fighterHealt = totalHP;
 
-  function getName() {
-    return fighterName;
-  }
-
-  function getDamage() {
-    return fighterDamage;
-  }
-
-  function getAgility() {
-    return fighterAgility;
-  }
-
-  function getHealth() {
-    return fighterHealt;
-  }
-
-  function attack(rivalFeature) {
-    const { name: rivalName, damage: rivalDamage } = rivalFeature.fighterFeature;
-    const successRate = Math.floor(Math.random() * max) > fighterAgility;
-
+  this.getName = () => props.name;
+  this.getDamage = () => props.damage;
+  this.getAgility = () => props.agility;
+  this.getHealth = () => props.hp;
+  this.dealDamage = healthpoint => {
+    if (props.hp - healthpoint < 0) {
+      props.hp = 0;
+    } else {
+      props.hp -= healthpoint;
+    }
+  };
+  this.attack = rival => {
+    const successRate = Math.floor(Math.random() * max) > rival.getAgility();
     if (successRate) {
-      console.log(`${rivalName} make ${rivalDamage} damage to ${fighterName}`);
-      fighterHealt -= rivalDamage;
+      console.log(`${this.getName()} make ${this.getDamage()} damage to ${rival.getName()}`);
+      rival.dealDamage(this.getDamage());
     } else {
-      console.log(`${rivalName} attack missed`);
+      console.log(`${this.getName()} attack missed`);
     }
-    if (fighterHealt <= 0) {
-      fighterHealt = 0;
-      addLoss();
-      rivalFeature.addWin();
+    if (this.getHealth() <= 0) {
+      props.hp = 0;
+      this.addLoss();
+      rival.addWin();
     }
-  }
-
-  function logCombatHistory() {
-    return `Name: ${fighterName}, Wins: ${combatHistory.wins} Losses: ${combatHistory.loss}`;
-  }
-
-  function dealDamage(healthpoint) {
-    fighterHealt = 0;
-    if (fighterHealt - healthpoint < 0) {
-      return fighterHealt;
+  };
+  this.logCombatHistory = () => {
+    console.log(`Name: ${this.getName()}, Wins: ${combatHistory.wins} Losses: ${combatHistory.loss}`);
+  };
+  this.dealDamage = healthpoint => {
+    if (props.hp - healthpoint < 0) {
+      props.hp = 0;
     } else {
-      fighterHealt -= healthpoint;
-      return fighterHealt;
+      props.hp -= healthpoint;
     }
-  }
-
-  function heal(healthpoint) {
-    if (fighterHealt + healthpoint > totalHP) {
-      return totalHP;
+  };
+  this.heal = healthpoint => {
+    if (props.hp + healthpoint > totalHP) {
+      props.hp = totalHP;
     } else {
-      fighterHealt += healthpoint;
-      return fighterHealt;
+      props.hp += healthpoint;
     }
-  }
+  };
 
-  function addWin() {
-    return combatHistory.wins++;
-  }
-
-  function addLoss() {
-    if (fighterHealt <= 0) {
-      return combatHistory.loss++;
-    }
-  }
-
-  return {
-    getName,
-    getDamage,
-    getAgility,
-    getHealth,
-    attack,
-    heal,
-    fighterHealt,
-    fighterFeature,
-    logCombatHistory,
-    addWin,
-    addLoss,
-    combatHistory,
-    dealDamage
+  this.addWin = () => combatHistory.wins++;
+  this.addLoss = () => {
+    combatHistory.loss++;
   };
 }
 
 function battle(fighter1, fighter2) {
-  if (fighter1.getHealth() < 0) {
+  if (fighter1.getHealth() <= 0) {
     console.log(`${fighter1.getName()} is dead and cant fight.`);
-  } else if (fighter2.getHealth() < 0) {
+  } else if (fighter2.getHealth() <= 0) {
     console.log(`${fighter2.getName()} is dead and cant fight.`);
   } else {
     while (fighter1.getHealth() > 0 && fighter2.getHealth() > 0) {
