@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  background-color: #f3f3f3;
+}
+.header {
+  max-width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.header-wraper {
+  max-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 0%;
+  background-image: url("../img/sample2.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+}
+.header-wraper::after {
+  content: "";
+  position: absolute;
+  top: 100vh;
+  right: 0;
+  z-index: -1;
+  border-bottom: 40vh solid transparent;
+  border-top: 20vh solid #000;
+  border-right: 100vw solid #000;
+  border-left: 0 solid #000;
+  width: 0;
+}
+.top_content {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+.landing-logo {
+  color: #fff;
+  align-self: flex-start;
+  letter-spacing: 3px;
+  font-weight: normal;
+  font-size: 2vh;
+}
+ul li {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+}
+.nav-right ul li:first-child {
+  padding-right: 40px;
+}
+.nav-item:not(:last-of-type) {
+  margin-right: 12vw;
+}
+.header-logo-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1.header-title {
+  font-size: 10vh;
+  letter-spacing: 10px;
+  font-weight: 100;
+}
+h1.header-title span {
+  font-size: 2em;
+  font-weight: normal;
+}
+span {
+  font-weight: 700;
+}
+p.header-text {
+  font-size: 2.5vh;
+  font-weight: 200;
+}
+a:link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+a:visited {
+  font-weight: 700;
+  color: #ffff;
+}
+.nav_center_wraper {
+  height: 32vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.nav-item {
+  border-style: solid;
+  border-color: #fff;
+  display: inline-block;
+  line-height: 50px;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+}
+.nav-center li:hover {
+  background-color: rgb(255, 255, 255, 0.1);
+}
+.header-bottom-text {
+  flex: 1 0 50%;
+  padding: 20px;
+}
+.header-bottom-wraper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  height: 35vh;
+  bottom: -50vh;
+}
+.header-bottom-text-left {
+  color: #000;
+  align-self: flex-end;
+  padding-left: 25px;
+  flex: 1 0 0;
+  font-size: 2.5vh;
+}
+.header-bottom-text-right {
+  color: #fff;
+  flex: 1 0 0;
+  margin-left: 40px;
+  padding-right: 40px;
+  font-size: 2.5vh;
+}
+main {
+  margin-top: 55vh;
+}
+.main_header {
+  text-align: center;
+  color: #000;
+  font-size: 4vh;
+  padding-bottom: 30px;
+  font-weight: 300;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+img {
+  display: block;
+}
+.img-likes {
+  position: absolute;
+  font-weight: normal;
+  display: inline-block;
+  padding: 7px 12px 7px 12px;
+  font-size: 2vh;
+  z-index: 2;
+  background-color: rgb(0, 0, 0, 0.6);
+  color: #fff;
+  right: 25px;
+  top: 20px;
+  border: 2px solid #fff;
+}
+.section-wraper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 25px 0 25px;
+}
+.section-wraper:last-of-type {
+  flex-direction: row-reverse;
+}
+.section-text {
+  flex: 1 0 50%;
+  color: #000;
+}
+.section-text p {
+  text-align: center;
+  font-size: 2.5vh;
+  padding: 15px 0 15px 40px;
+}
+.section-wraper:last-of-type p {
+  text-align: center;
+  font-size: 2.5vh;
+  padding: 15px 40px 15px 0;
+}
+.image-wraper {
+  flex: 1 0 50%;
+  position: relative;
+  box-sizing: border-box;
+}
+.padding-bottom {
+  padding-bottom: 20px;
+}
+.news-section {
+  background-color: #fff;
+  padding: 20px;
+  color: #000;
+}
+.galery {
+  margin-top: 20px;
+  padding: 20px 0 20px 0;
+  width: 100%;
+  display: flex;
+  height: auto;
+
+  justify-content: center;
+}
+img {
+  max-width: 100%;
+}
+.header-logo-text {
+  height: 45%;
+  width: 100%;
+}
+button:focus,
+input:focus {
+  outline: none;
+}
+.image-news-wraper {
+  position: relative;
+}
+.image-news-wraper:not(:last-of-type) {
+  margin-right: 40px;
+}
+.image-news-wraper img {
+  object-fit: cover;
+  object-position: 0 0;
+  width: 37vh;
+  height: 50vh;
+}
+.gallery-button {
+  position: absolute;
+  border: none;
+  text-align: center;
+  background-color: #097774;
+  color: #fff;
+  font-weight: 700;
+  width: 170px;
+  height: 40px;
+  opacity: 0.8;
+  top: 50%;
+  left: 50%;
+  font-size: 1.8vh;
+  transform: translate(-50%, -50%);
+}
+.button-load-news {
+  border: none;
+  background-color: #097774;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  width: 350px;
+  height: 50px;
+  border: none;
+  font-size: 1.8vh;
+}
+.section-bottom-button {
+  text-align: center;
+  font-size: 2vh;
+}
+button:hover,
+input[type="submit"]:hover {
+  background-color: #1de2dc;
+  cursor: pointer;
+}
+.inf-date-city {
+  position: absolute;
+  color: #fff;
+  bottom: 15px;
+  left: 15px;
+  font-weight: 700;
+  font-size: 2vh;
+}
+.month-date {
+  font-weight: 300;
+}
+form {
+  margin-left: auto;
+  text-align: right;
+  padding: 10px;
+}
+.subscription-form {
+  display: inline-block;
+}
+.subscription-section {
+  padding: 40px 20px 40px 20px;
+  color: #000;
+  font-size: 2.5vh;
+  background-color: #e8e8e8;
+}
+input[type="email"] {
+  border: 2px solid #000;
+  padding-left: 20px;
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  background-color: #e8e8e8;
+}
+input[type="submit"] {
+  color: #fff;
+  height: 50px;
+  font-size: 1.8vh;
+  font-weight: 700;
+  background-color: #097774;
+  text-align: center;
+  width: 150px;
+  border: none;
+  margin-left: 10px;
+}
+input[type="email"]::placeholder {
+  color: #000;
+}
+label {
+  font-size: 4vh;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+footer {
+  padding: 15px 0 15px 0;
+  background-color: #fff;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copyright-owner {
+  color: #9e9e9e;
+  font-size: 2.5vh;
+}
+.footer-nav-item a:link {
+  color: #000;
+  text-decoration: none;
+  font-size: 2.5vh;
+}
+.footer-nav-item a:visited {
+  color: #000;
+}
+.footer-nav-item:not(:last-of-type) {
+  padding-right: 15px;
+}
