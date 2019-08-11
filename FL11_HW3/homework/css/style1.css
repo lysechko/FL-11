@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+body {
+  min-height: 100%;
+  font-size: 16px;
+  background-color: #fff; }
+
+.landing-logo {
+  display: flex;
+  align-items: flex-start;
+  align-content: center;
+  padding-top: 20px;
+  font-family: "Hind", sans-serif; }
+  .landing-logo p {
+    color: #2c2f3c;
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    line-height: 20px; }
+    .landing-logo p span {
+      display: block;
+      text-align: center;
+      margin-top: 0;
+      padding-top: 0;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: normal; }
+  .landing-logo img {
+    width: 40px; }
+
+header .landing-logo,
+header .header_heading,
+header .header_text,
+header .header_button {
+  margin-left: 135px;
+  margin-bottom: 30px; }
+
+.header-wrap {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 600px;
+  border-bottom-right-radius: 30%;
+  background-size: cover;
+  background-position: 60% 50%;
+  background-image: url("../img/m-h-day.jpg");
+  background-repeat: no-repeat; }
+  .header-wrap p.header_heading {
+    font-size: 72px;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #2c2f3c;
+    text-align: left;
+    width: 500px;
+    position: relative;
+    z-index: 1;
+    font-weight: 900;
+    line-height: 1; }
+    .header-wrap p.header_heading::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60%;
+      z-index: -1;
+      border-bottom: 20px solid #14a0c7; }
+  .header-wrap p.header_text {
+    color: #2c2f3c;
+    font-family: "Hind", sans-serif;
+    text-align: left;
+    font-weight: 500;
+    width: 520px;
+    line-height: 1.5; }
+
+button, .header_button, .section_banner_button {
+  background-color: #699900;
+  border: none;
+  color: #fff;
+  width: 120px;
+  height: 40px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 3px; }
+
+.header_button {
+  align-self: flex-start; }
+
+.section_banner_button {
+  align-self: center; }
+
+.section {
+  padding-top: 20px;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif; }
+  .section p.section_text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c2f3c;
+    position: relative;
+    display: inline;
+    z-index: 1; }
+    .section p.section_text::after {
+      content: "";
+      right: 8px;
+      position: absolute;
+      bottom: 0;
+      width: 45%;
+      z-index: -1;
+      border-bottom: 10px solid #14a0c7; }
+  .section p.section_card_heading {
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    font-weight: 500; }
+  .section p.section_card_text {
+    font-size: 14px;
+    font-family: "Hind", sans-serif;
+    padding-top: 10px;
+    line-height: 1.2;
+    color: #c3c3c3;
+    font-weight: lighter; }
+  .section span.section_card_underline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    border-bottom: 8px solid #14a0c7; }
+
+.section_card_wrap {
+  margin-left: 135px;
+  margin-right: 135px;
+  margin-top: 20px;
+  display: flex; }
+  .section_card_wrap .section_card {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 5px;
+    flex: 1 0 0; }
+    .section_card_wrap .section_card:not(:first-of-type) {
+      margin-left: 15px; }
+  .section_card_wrap .section_card_img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 5px; }
+
+.section_banner {
+  background-image: linear-gradient(70deg, #65950e, #4c7b69, #2e5cd4);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 600px;
+  height: 150px;
+  margin: auto;
+  position: relative;
+  top: 75px;
+  border-radius: 3px; }
+  .section_banner p.section_banner_heading {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    color: #2c2f3c;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 60px;
+    z-index: 1; }
+    .section_banner p.section_banner_heading::after {
+      content: "";
+      position: absolute;
+      left: 97px;
+      bottom: 0;
+      width: 15%;
+      z-index: -1;
+      border-bottom: 10px solid #14a0c7; }
+  .section_banner p.section_banner_text {
+    font-family: "Hind", sans-serif;
+    color: #c3c3c3;
+    text-align: left;
+    position: absolute;
+    bottom: 55px;
+    display: block; }
+
+footer {
+  font-family: "Hind", sans-serif;
+  background-color: #222; }
+  footer .footer-wrap {
+    height: 200px;
+    margin-left: 135px;
+    margin-right: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c3c3c3; }
+    footer .footer-wrap p.footer_text {
+      text-align: left;
+      flex: 1 0 0;
+      padding-top: 80px;
+      line-height: 1.3;
+      font-size: 14px; }
+    footer .footer-wrap .landing-logo {
+      flex: 1 0 0;
+      padding-top: 80px; }
+      footer .footer-wrap .landing-logo p {
+        color: #c3c3c3;
+        font-weight: 700; }
+    footer .footer-wrap span.footer-cr {
+      flex: 1 0 0;
+      text-align: right;
+      padding-top: 80px; }
