@@ -61,7 +61,6 @@ function Pichu() {
   Pokemon.call(this);
   this.type = 'Electric';
   this.species = 'Mouse Pokémon';
-  this.fly = false;
 
   this.evolve = function() {
     return new Pikachu();
@@ -94,6 +93,7 @@ function Raichu() {
 
 function Elekid() {
   'use strict';
+
   Pokemon.call(this);
   this.type = 'Electric';
   this.species = 'Electric Pokémon';
