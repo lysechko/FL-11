@@ -10,6 +10,7 @@ const copyArray = arr => {
   const result = [...arr];
   return result;
 };
+
 const array = [1, 2, 3];
 const copiedArray = copyArray(array);
 console.log(array, copiedArray);
@@ -39,6 +40,7 @@ const regroupObject = obj => {
   };
   return regroupObj;
 };
+
 const oldObj = {
   name: 'Someone',
   details: { id: 1, age: 11, university: 'UNI' }
@@ -69,6 +71,7 @@ const add = (a = required(), b = required()) => {
   const sum = a + b;
   return sum;
 };
+
 console.log(add(1, 3));
 
 const getNameUsingPromise = () => {
