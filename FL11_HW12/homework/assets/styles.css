@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#root {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+h1 {
+  text-align: center;
+  padding: 20px;
+  color: #000;
+}
+input[type="text"] {
+  margin: 0 auto;
+  display: block;
+  width: 60%;
+  height: 40px;
+}
+ul {
+  text-align: left;
+  margin: 0 auto;
+  width: 80%;
+  padding: 0;
+  display: block;
+}
+.cancel {
+  margin-right: 25px;
+}
+.save {
+  margin-left: 25px;
+}
+.inputForm {
+  margin: 0 auto;
+  width: 100%;
+}
+ul {
+  text-align: left;
+  margin: 0 auto;
+  width: 80%;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 15px;
+  /* padding-bottom: 15px; */
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* text-align: center;
+  vertical-align: middle; */
+}
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+/* .add_task {
+  padding: 10px;
+  border: 1px solid #000;
+} */
+.check {
+  width: 35px;
+  height: 35px;
+  background-image: url(../assets/img/todo-s.png);
+  background-repeat: no-repeat;
+}
+.checked {
+  width: 35px;
+  height: 35px;
+  background-image: url(../assets/img/done-s.png);
+  background-repeat: no-repeat;
+}
+.remove {
+  width: 35px;
+  height: 35px;
+  background-image: url(../assets/img/remove-s.jpg);
+  background-repeat: no-repeat;
+  text-align: right;
+}
+.description {
+  font-size: 18px;
+}
+.warning {
+  background-color: #000;
+}
+/* .warning {
+  margin: 0 auto;
+} */
+a {
+  text-decoration: none;
+  color: black;
+}
+.selected {
+  background-color: #e7e7e7;
+}
+.cancel,
+.save,
+.add_task,
+.save_modification {
+  padding: 10px;
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  margin: 20px;
+}
+
+.cancel:hover,
+.save:hover,
+.add_task:hover,
+.save_modification:hover {
+  cursor: pointer;
+  background-color: #e7e7e7;
+}
+p.add_heading {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+}
