@@ -200,7 +200,7 @@ const router = async () => {
     }
   };
 
-  const modify = async e => {
+  const modify = e => {
     const node = e.target.closest('li');
     if (e.target.className === 'modify') {
       const div = document.createElement('div');
