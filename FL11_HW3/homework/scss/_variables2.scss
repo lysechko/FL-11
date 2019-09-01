@@ -1,0 +1,21 @@
+$footer-background: #3b3f50;
+$content-background: #21232e;
+$color-underline: #ff4e33;
+$section-card-color: #222;
+$text-primary-color: #fff;
+$button-text-color: $text-primary-color;
+$text-secondary-color: #f1eec9;
+$text-tertiary-color: $text-primary-color;
+$button-background: #ffac00;
+$banner-background-image: linear-gradient(70deg, #ffac00, #b5632f, #932e51);
+$header-image: url("../img/m-h-night.jpg");
+$font-map: (
+  primary: (
+    "Source Sans Pro",
+    sans-serif
+  ),
+  secondary: (
+    "Fresca",
+    sans-serif
+  )
+);
