@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#root {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+h1 {
+  text-align: center;
+  padding: 20px;
+  color: #3ab2fe;
+}
+input[type="text"] {
+  width: 80%;
+  display: inline-block;
+  height: 40px;
+}
+button {
+  border: 0;
+  padding: 0;
+  height: 0;
+  outline: none;
+  cursor: pointer;
+  background: none;
+}
+hr {
+  border-top: 10px solid #3ab2feaa;
+  margin: 20px auto;
+  width: 80%;
+  text-align: center;
+}
+ul {
+  text-align: left;
+  margin: 0 auto;
+  width: 80%;
+  padding: 0;
+}
+i.material-icons:not(.add) {
+  color: #3ab2fe;
+}
+li {
+  list-style: none;
+  padding-bottom: 15px;
+  cursor: pointer;
+}
+li span {
+  font-size: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #3ab2fe;
+}
+i.material-icons {
+  font-size: 36px;
+  vertical-align: middle;
+}
+.delete {
+  float: right;
+  line-height: 50px;
+}
+.message {
+  color: #3ab2fe;
+  font-weight: 100;
+}
